@@ -1,3 +1,4 @@
+import './App.css';
 import { useState } from 'react';
 import searchImages from './api';
 import SearchBar from './components/SearchBar';
@@ -12,10 +13,12 @@ function App() {
     };
 
     return (
-        <div>
-            <SearchBar onSubmit={handleSubmit} />
-            <ImageList images={images} />
-        </div>
+        <header className="App-header">
+            <div>
+                <SearchBar onSubmit={handleSubmit} />
+                <ImageList images={images} />
+            </div>
+        </header>
     );
 }
 
